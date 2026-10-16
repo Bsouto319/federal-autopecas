@@ -123,6 +123,32 @@
     .gallery-item img { width: 100%; height: 340px; object-fit: cover; display: block; transition: transform .5s; }
     .gallery-item:hover img { transform: scale(1.05); }
 
+    /* AGENDAR */
+    .agendar-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 36px; margin-top: 40px; max-width: 640px; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .f-row.full { grid-template-columns: 1fr; }
+    .f-field { display: flex; flex-direction: column; gap: 6px; }
+    .f-label { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; color: var(--muted); text-transform: uppercase; }
+    .f-inp, .f-ta {
+      background: var(--bg); border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 11px 14px; font-size: 14px; color: var(--text); font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color .2s; width: 100%;
+    }
+    .f-inp:focus, .f-ta:focus { border-color: var(--red); background: #fff; }
+    .f-ta { resize: vertical; min-height: 70px; }
+    .f-submit {
+      width: 100%; padding: 14px; border: none; border-radius: 8px;
+      background: var(--red); color: #fff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: all .2s; margin-top: 4px;
+    }
+    .f-submit:hover:not(:disabled) { background: var(--red-dark); }
+    .f-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+    .f-msg { font-size: 13px; margin-top: 10px; text-align: center; }
+    .f-msg.ok { color: #0a7a3d; }
+    .f-msg.err { color: var(--red); }
+    .f-success { display: none; text-align: center; padding: 20px 0; }
+    .f-success-ico { width: 56px; height: 56px; border-radius: 50%; background: #e3f6ec; color: #0a7a3d; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 14px; }
+
     /* MAPA */
     .map-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 44px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
     .map-info { background: var(--white); padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
@@ -290,6 +316,53 @@
     </div>
   </div>
 
+  <!-- AGENDAR -->
+  <div class="section" style="background: var(--white);">
+    <div class="section-inner">
+      <div class="eyebrow">Agendar</div>
+      <h2 class="section-title">Já quer marcar um horário?</h2>
+      <p class="section-sub">Conta o que precisa e a gente te chama pra confirmar — sem precisar ligar na hora.</p>
+
+      <div class="agendar-card">
+        <div id="agendar-form">
+          <div class="f-row">
+            <div class="f-field">
+              <label class="f-label" for="ag-nome">Nome *</label>
+              <input class="f-inp" id="ag-nome" placeholder="Seu nome">
+            </div>
+            <div class="f-field">
+              <label class="f-label" for="ag-telefone">Telefone / WhatsApp *</label>
+              <input class="f-inp" id="ag-telefone" type="tel" placeholder="(61) 90000-0000">
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-field">
+              <label class="f-label" for="ag-servico">Serviço ou peça</label>
+              <input class="f-inp" id="ag-servico" placeholder="Ex: avaliação geral, troca de óleo...">
+            </div>
+            <div class="f-field">
+              <label class="f-label" for="ag-data">Data de preferência</label>
+              <input class="f-inp" id="ag-data" type="date">
+            </div>
+          </div>
+          <div class="f-row full">
+            <div class="f-field">
+              <label class="f-label" for="ag-obs">Observações</label>
+              <textarea class="f-ta" id="ag-obs" placeholder="Algum detalhe que ajude a gente a te atender melhor"></textarea>
+            </div>
+          </div>
+          <div id="ag-msg" class="f-msg"></div>
+          <button class="f-submit" id="ag-submit" onclick="enviarAgendamento()">Enviar pedido</button>
+        </div>
+        <div id="agendar-success" class="f-success">
+          <div class="f-success-ico">✓</div>
+          <p style="font-weight:700; color:var(--text); margin-bottom:4px;">Pedido recebido!</p>
+          <p style="font-size:13px; color:var(--muted);">A gente te chama em breve pra confirmar. Se preferir, liga direto: <strong>(61) 3563-5200</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- LOCALIZACAO -->
   <div class="section dark">
     <div class="section-inner">
@@ -338,6 +411,46 @@
   <a href="tel:+556135635200" class="call-float" aria-label="Ligar agora">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
   </a>
+
+  <script>
+    async function enviarAgendamento() {
+      var nome = document.getElementById('ag-nome').value.trim();
+      var telefone = document.getElementById('ag-telefone').value.trim();
+      var servico = document.getElementById('ag-servico').value.trim();
+      var data = document.getElementById('ag-data').value;
+      var obs = document.getElementById('ag-obs').value.trim();
+      var msgEl = document.getElementById('ag-msg');
+      var btn = document.getElementById('ag-submit');
+
+      if (!nome || !telefone) {
+        msgEl.textContent = 'Preenche nome e telefone pra gente poder retornar.';
+        msgEl.className = 'f-msg err';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      msgEl.textContent = '';
+
+      try {
+        var resp = await fetch('https://iopdfbsndijehdqowfmj.supabase.co/functions/v1/federal-agendamento', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nome: nome, telefone: telefone, servico: servico, data_preferida: data || null, observacoes: obs }),
+        });
+        var json = await resp.json().catch(function () { return {}; });
+        if (!resp.ok || json.error) throw new Error(json.error || 'erro ao enviar');
+
+        document.getElementById('agendar-form').style.display = 'none';
+        document.getElementById('agendar-success').style.display = 'block';
+      } catch (e) {
+        msgEl.textContent = 'Não consegui enviar agora. Tenta de novo ou liga: (61) 3563-5200.';
+        msgEl.className = 'f-msg err';
+        btn.disabled = false;
+        btn.textContent = 'Enviar pedido';
+      }
+    }
+  </script>
 
 </body>
 </html>
