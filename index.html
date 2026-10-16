@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c91f2e'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Baloo+2:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -31,15 +31,16 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       border-bottom: 2px solid var(--red);
     }
-    .nav-logo { display: flex; align-items: center; gap: 12px; }
-    .nav-badge {
-      width: 42px; height: 42px; border-radius: 6px;
-      background: var(--red);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: #fff; letter-spacing: 0.5px;
+    /* Logo "Federal" recriada em vetor a partir da placa real da loja --
+       texto arredondado + anel/swoosh ao redor do F, em vermelho. Fica
+       nítida em qualquer tamanho, diferente da foto original (baixa res). */
+    .federal-logo { display: flex; align-items: center; height: 44px; position: relative; }
+    .federal-logo-ring { position: absolute; left: -6px; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; z-index: 1; }
+    .federal-logo-text {
+      font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 28px; line-height: 1;
+      color: #fff; letter-spacing: -0.5px; position: relative; z-index: 2; padding-left: 34px;
     }
-    .nav-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; color: #fff; line-height: 1.1; letter-spacing: 0.5px; text-transform: uppercase; }
-    .nav-sub { font-size: 11px; color: #9a9da2; letter-spacing: 0.5px; }
+    .nav-sub { font-size: 11px; color: #9a9da2; letter-spacing: 0.5px; margin-left: 8px; }
     .nav-right { display: flex; align-items: center; gap: 18px; }
     .nav-rating { display: none; align-items: center; gap: 5px; color: var(--gold); font-size: 13px; font-weight: 700; }
     .nav-cta {
@@ -183,12 +184,20 @@
 <body>
 
   <nav class="nav">
-    <div class="nav-logo">
-      <div class="nav-badge">F</div>
-      <div>
-        <div class="nav-name">Federal Auto Peças</div>
-        <div class="nav-sub">e Serviços · Taguatinga-DF</div>
+    <div style="display:flex; align-items:center;">
+      <div class="federal-logo">
+        <svg class="federal-logo-ring" viewBox="0 0 46 46">
+          <defs>
+            <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff6b5e"/>
+              <stop offset="100%" stop-color="#9c1521"/>
+            </linearGradient>
+          </defs>
+          <circle cx="23" cy="23" r="18" fill="none" stroke="url(#ringGrad)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="85 28" transform="rotate(-50 23 23)"/>
+        </svg>
+        <span class="federal-logo-text">Federal</span>
       </div>
+      <span class="nav-sub">Auto Peças e Serviços</span>
     </div>
     <a href="tel:+556135635200" class="nav-cta">📞 (61) 3563-5200</a>
   </nav>
