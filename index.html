@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federal Auto Peças e Serviços — Taguatinga Norte, Brasília-DF</title>
+<meta name="description" content="Peças automotivas e oficina mecânica em Taguatinga Norte. Agende revisão, troca de óleo, freios, suspensão e diagnóstico pelo WhatsApp. (61) 3563-5200.">
+<meta name="theme-color" content="#c8102e">
+<meta property="og:title" content="Federal Auto Peças e Serviços">
+<meta property="og:description" content="Peças e oficina em um só lugar. Agende seu serviço online.">
+<meta property="og:image" content="/hero-federal.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c8102e'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='800' font-size='20' text-anchor='middle' fill='white'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c8102e;--red2:#9e0b22;--dark:#0e1013;--dark2:#16191e;--card:#1c2026;--line:rgba(255,255,255,.09);--txt:#f2f3f5;--mut:#a3a9b3;--light:#f5f5f3;--ink:#16181b;--inkm:#565c66}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--dark);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.mont{font-family:Montserrat,sans-serif}
+.logo{display:flex;align-items:center;gap:10px}
+.logo b{font-family:Montserrat;font-style:italic;font-weight:900;font-size:26px;letter-spacing:-.5px;color:#fff;position:relative;line-height:1}
+.logo b::after{content:"";position:absolute;left:-4px;right:-6px;bottom:-6px;height:5px;border-radius:50%;background:var(--red);transform:rotate(-3deg)}
+.logo small{font-size:10px;line-height:1.15;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.sc{background:rgba(14,16,19,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav nav{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:#d9dce1}
+.nav nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:12px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:Inter}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 26px rgba(200,16,46,.38)}
+.btn-red:hover{background:#d91a39}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-wa{background:#25d366;color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.3)}
+.btn.sm{padding:10px 16px;font-size:14px}
+svg.i{width:20px;height:20px;flex:none}
+/* hero */
+.hero{position:relative;padding:116px 0 70px;overflow:hidden;background:radial-gradient(circle at 85% 10%,rgba(200,16,46,.25),transparent 45%),var(--dark)}
+.hgrid{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+.shot{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.5);border:1px solid var(--line)}
+.shot img{width:100%;aspect-ratio:826/589;object-fit:cover}
+.shot .tag{position:absolute;left:14px;bottom:14px;background:rgba(14,16,19,.82);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:9px 13px;font-size:13px;font-weight:600;display:flex;gap:8px;align-items:center}
+.shot .tag b{color:#ff6a80}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:30px}.hero{padding-top:96px}}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(200,16,46,.16);border:1px solid rgba(200,16,46,.5);color:#ffb3bf;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:#2ee66b;box-shadow:0 0 0 4px rgba(46,230,107,.2)}
+.hero h1{font-size:clamp(36px,4.8vw,62px);line-height:1.02;font-weight:900;margin:20px 0 18px;max-width:780px;letter-spacing:-1.5px}
+.hero h1 em{font-style:italic;color:var(--red)}
+.hero p.lead{font-size:clamp(16px,2vw,19px);color:#cfd3d9;max-width:560px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:48px}
+.stat b{font-family:Montserrat;font-size:30px;font-weight:900;display:block;line-height:1}
+.stat b span{color:var(--red)}
+.stat small{color:var(--mut);font-size:13px}
+/* sections */
+section{padding:96px 0}
+.eyebrow{color:var(--red);font-weight:800;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-family:Montserrat}
+.h2{font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1.1;margin:10px 0 14px;letter-spacing:-.8px}
+.sub{color:var(--mut);max-width:600px;font-size:16.5px}
+.head{margin-bottom:46px}.head.c{text-align:center}.head.c .sub{margin:0 auto}
+.light{background:var(--light);color:var(--ink)}.light .sub{color:var(--inkm)}
+/* services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.svc::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.svc:hover{transform:translateY(-6px);border-color:rgba(200,16,46,.45)}.svc:hover::before{transform:scaleX(1)}
+.svc .ic{width:52px;height:52px;border-radius:14px;background:rgba(200,16,46,.13);display:grid;place-items:center;margin-bottom:16px;color:#ff4d68}
+.svc .ic svg{width:26px;height:26px}
+.svc h3{font-size:18px;font-weight:800;margin-bottom:6px}
+.svc p{color:var(--mut);font-size:14.5px}
+.svc a{display:inline-flex;margin-top:14px;font-size:13.5px;font-weight:700;color:#ff6a80}
+/* why */
+.why{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.photos{position:relative;height:480px}
+.photos img{position:absolute;border-radius:20px;object-fit:cover;box-shadow:0 24px 50px rgba(0,0,0,.25)}
+.photos .a{width:78%;height:72%;top:0;left:0}
+.photos .b{width:58%;height:52%;bottom:0;right:0;border:6px solid var(--light)}
+.photos .badge{position:absolute;left:18px;bottom:30px;background:var(--red);color:#fff;border-radius:16px;padding:16px 18px;font-family:Montserrat;box-shadow:0 14px 30px rgba(200,16,46,.4)}
+.photos .badge b{font-size:28px;font-weight:900;display:block;line-height:1}.photos .badge small{font-size:12px;font-weight:600}
+.checks{display:grid;gap:16px;margin-top:26px}
+.check{display:flex;gap:14px;align-items:flex-start}
+.check .ok{width:30px;height:30px;flex:none;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:900;font-size:15px;margin-top:2px}
+.check h4{font-size:16px;font-weight:700}.check p{color:var(--inkm);font-size:14.5px}
+/* booking */
+.book{background:radial-gradient(circle at 90% 0%,rgba(200,16,46,.22),transparent 45%),var(--dark2)}
+.bk{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start}
+.steps{display:grid;gap:18px;margin-top:28px}
+.st{display:flex;gap:14px}.st span{width:36px;height:36px;flex:none;border-radius:10px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;color:#ff6a80;font-family:Montserrat}
+.st b{display:block}.st p{color:var(--mut);font-size:14.5px}
+.form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 24px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.form h3{font-size:22px;font-weight:900;margin-bottom:4px}.form .fs{color:var(--mut);font-size:14px;margin-bottom:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{margin-bottom:14px}
+.f label{display:block;font-size:12.5px;font-weight:700;color:#cfd3d9;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.f input,.f select,.f textarea{width:100%;background:#12151a;border:1px solid #2c323b;border-radius:12px;padding:13px 14px;color:#fff;font:15px Inter,sans-serif;outline:none;transition:border-color .2s}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--red)}
+.f input::placeholder,.f textarea::placeholder{color:#6b727d}
+.f input[type=date]{color-scheme:dark}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #2c323b;background:#12151a;color:#dfe2e6;border-radius:999px;padding:9px 14px;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .15s;user-select:none}
+.chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px}
+.slot{border:1px solid #2c323b;background:#12151a;color:#dfe2e6;border-radius:10px;padding:10px 0;text-align:center;font-weight:700;font-size:14px;cursor:pointer}
+.slot.on{background:var(--red);border-color:var(--red);color:#fff}
+.slot.off{opacity:.3;pointer-events:none;text-decoration:line-through}
+.hint{font-size:13px;color:var(--mut)}
+.err{color:#ff6a80;font-size:13.5px;font-weight:600;min-height:20px;margin-top:4px}
+.form .btn{width:100%;margin-top:6px;font-size:16px;padding:16px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.rev{background:#fff;border-radius:18px;padding:26px;border:1px solid #e6e4df;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.rev .s{color:#f5b301;font-size:18px;letter-spacing:2px}
+.rev p{margin:12px 0 16px;font-size:15.5px;color:var(--ink);font-weight:500}
+.rev small{color:var(--inkm);font-weight:600}
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:stretch}
+.info{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 26px;display:grid;gap:22px;align-content:start}
+.info .it{display:flex;gap:14px}.info .it .ic{width:44px;height:44px;flex:none;border-radius:12px;background:rgba(200,16,46,.14);color:#ff4d68;display:grid;place-items:center}
+.info small{color:var(--mut);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}.info p{font-weight:600}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.2) contrast(1.05)}
+/* faq */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:12px}
+details{background:#fff;border:1px solid #e6e4df;border-radius:14px;padding:18px 20px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px;color:var(--ink)}
+summary::after{content:"+";color:var(--red);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--inkm);margin-top:10px;font-size:15px}
+/* cta */
+.cta{background:linear-gradient(120deg,var(--red2),var(--red));border-radius:28px;padding:56px 30px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.06);right:-120px;top:-160px}
+.cta h2{font-size:clamp(28px,4vw,42px);font-weight:900;line-height:1.1}
+.cta p{opacity:.9;margin:12px 0 26px}
+.cta .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta .btn-white{background:#fff;color:var(--red)}
+footer{padding:46px 0 110px;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
+.fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+footer a:hover{color:#fff}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.35);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.mbar{display:none}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}.rv.on{opacity:1;transform:none}
+@media(max-width:900px){
+ .nav nav,.nav .btn-ghost{display:none}
+ .why,.bk,.loc{grid-template-columns:1fr}
+ .photos{height:360px}
+ section{padding:70px 0}
+ .row{grid-template-columns:1fr}
+ .fab{bottom:84px}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(14,16,19,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+ .mbar .btn{padding:13px 10px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr"><div class="wrap nav">
+  <a href="#" class="logo"><b>Federal</b><small>Auto Peças<br>e Serviços</small></a>
+  <nav><a href="#servicos">Serviços</a><a href="#porque">Por que a Federal</a><a href="#agendar">Agendar</a><a href="#avaliacoes">Avaliações</a><a href="#onde">Onde estamos</a></nav>
+  <div style="display:flex;gap:10px"><a class="btn btn-ghost sm" href="tel:+556135635200">(61) 3563-5200</a><a class="btn btn-red sm" href="#agendar">Agendar serviço</a></div>
+</div></header>
+
+<section class="hero">
+  <div class="wrap hgrid"><div>
+    <span class="pill"><span class="dot"></span>Taguatinga Norte · Brasília-DF</span>
+    <h1>Peças e oficina<br>em <em>um só lugar.</em></h1>
+    <p class="lead">Compre a peça e faça o serviço no mesmo endereço. Diagnóstico antes do orçamento, mecânicos experientes e transparência do começo ao fim.</p>
+    <div class="ctas">
+      <a class="btn btn-red" href="#agendar"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Agendar meu serviço</a>
+      <a class="btn btn-ghost" href="tel:+556135635200"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Ligar agora</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>Peças<span>+</span>Oficina</b><small>tudo no mesmo lugar</small></div>
+      <div class="stat"><b>4,4<span>★</span></b><small>nota no Google</small></div>
+      <div class="stat"><b>Seg<span>–</span>Sáb</b><small>atendimento a partir das 8h</small></div>
+    </div>
+  </div>
+  <a class="shot" href="#onde"><img src="/hero-federal.png" alt="Fachada da Federal Auto Peças e Serviços na QNL 10, Taguatinga Norte"><span class="tag">📍 <span><b>Nossa loja:</b> QNL 10, Taguatinga Norte</span></span></a>
+  </div>
+</section>
+
+<section id="servicos"><div class="wrap">
+  <div class="head rv"><span class="eyebrow">O que fazemos</span><h2 class="h2">Serviços completos para o seu carro</h2><p class="sub">Da troca de óleo ao diagnóstico eletrônico. Escolha o serviço e agende em menos de 1 minuto.</p></div>
+  <div class="grid">
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></div><h3>Revisão completa</h3><p>Checagem geral do veículo para rodar com segurança e evitar surpresas.</p><a href="#agendar" data-svc="Revisão completa">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.4 6 11.3a6 6 0 0 1-12 0C6 9.1 12 2.7 12 2.7z"/></svg></div><h3>Troca de óleo e filtros</h3><p>Óleo e filtros certos para o seu motor, feitos na hora.</p><a href="#agendar" data-svc="Troca de óleo e filtros">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Freios</h3><p>Pastilhas, discos, lonas e fluido. Segurança em primeiro lugar.</p><a href="#agendar" data-svc="Freios">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M7 20V10l5-6 5 6v10M10 14h4"/></svg></div><h3>Suspensão e direção</h3><p>Amortecedores, buchas, pivôs e terminais. Fim dos barulhos.</p><a href="#agendar" data-svc="Suspensão e direção">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9l2 2 4-4"/></svg></div><h3>Diagnóstico</h3><p>Identificamos o problema antes de qualquer orçamento. Sem achismo.</p><a href="#agendar" data-svc="Diagnóstico">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Parte elétrica e bateria</h3><p>Bateria, alternador, motor de arranque e iluminação.</p><a href="#agendar" data-svc="Parte elétrica e bateria">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg></div><h3>Ar-condicionado</h3><p>Higienização, carga de gás e reparo do sistema.</p><a href="#agendar" data-svc="Ar-condicionado">Agendar →</a></div>
+    <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></div><h3>Peças no balcão</h3><p>Peças para manutenção e reparo com orientação de quem entende.</p><a href="#agendar" data-svc="Orçamento de peças">Pedir orçamento →</a></div>
+  </div>
+</div></section>
+
+<section id="porque" class="light"><div class="wrap why">
+  <div class="photos rv">
+    <img class="a" src="/galeria1.jpg" alt="Mecânico trabalhando no motor" loading="lazy">
+    <img class="b" src="/galeria2.jpg" alt="Serviço mecânico em detalhe" loading="lazy">
+    <div class="badge"><b>1 lugar</b><small>peça + serviço</small></div>
+  </div>
+  <div class="rv">
+    <span class="eyebrow">Por que a Federal</span>
+    <h2 class="h2">Sem correr atrás de peça em outro canto</h2>
+    <p class="sub">Você explica o problema, a gente diagnostica, mostra o orçamento e resolve, com a peça certa já na loja.</p>
+    <div class="checks">
+      <div class="check"><span class="ok">✓</span><div><h4>Diagnóstico antes do orçamento</h4><p>Você sabe exatamente o que será feito e por quê.</p></div></div>
+      <div class="check"><span class="ok">✓</span><div><h4>Peça e mão de obra juntas</h4><p>Mais rapidez: a peça sai do nosso estoque direto para o seu carro.</p></div></div>
+      <div class="check"><span class="ok">✓</span><div><h4>Atendimento direto no balcão</h4><p>Chegou, explicou, saiu com a solução ou com a peça certa na mão.</p></div></div>
+      <div class="check"><span class="ok">✓</span><div><h4>Agendamento online</h4><p>Escolha o dia e o horário pelo site e evite espera.</p></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="agendar" class="book"><div class="wrap bk">
+  <div class="rv">
+    <span class="eyebrow">Agendamento online</span>
+    <h2 class="h2">Agende seu serviço em 1 minuto</h2>
+    <p class="sub">Preencha ao lado e o pedido chega direto no WhatsApp da oficina. A gente confirma o horário com você.</p>
+    <div class="steps">
+      <div class="st"><span>1</span><div><b>Escolha o serviço</b><p>Pode marcar mais de um.</p></div></div>
+      <div class="st"><span>2</span><div><b>Informe o carro, o dia e o horário</b><p>Segunda a sábado, a partir das 8h.</p></div></div>
+      <div class="st"><span>3</span><div><b>Envie pelo WhatsApp</b><p>Confirmamos e seu horário fica reservado.</p></div></div>
+    </div>
+  </div>
+  <div class="form rv" id="form">
+    <h3>Agendar serviço</h3><p class="fs">Campos com * são obrigatórios</p>
+    <div class="f"><label>Serviço *</label><div class="chips" id="chips"></div></div>
+    <div class="row">
+      <div class="f"><label>Seu nome *</label><input id="nome" placeholder="Nome completo" autocomplete="name"></div>
+      <div class="f"><label>WhatsApp *</label><input id="tel" placeholder="(61) 9 0000-0000" inputmode="tel" autocomplete="tel"></div>
+    </div>
+    <div class="row">
+      <div class="f"><label>Carro (modelo e ano) *</label><input id="carro" placeholder="Ex.: Gol 1.6 2015"></div>
+      <div class="f"><label>Placa</label><input id="placa" placeholder="ABC1D23" maxlength="8" style="text-transform:uppercase"></div>
+    </div>
+    <div class="f"><label>Dia *</label><input type="date" id="data"><div class="hint" id="dhint"></div></div>
+    <div class="f"><label>Horário *</label><div class="slots" id="slots"><div class="hint">Escolha o dia primeiro</div></div></div>
+    <div class="f"><label>Conte o que está acontecendo</label><textarea id="obs" rows="3" placeholder="Ex.: barulho na roda dianteira ao frear"></textarea></div>
+    <div class="err" id="err"></div>
+    <button class="btn btn-wa" onclick="agendar()"><svg class="i" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>Enviar agendamento pelo WhatsApp</button>
+  </div>
+</div></section>
+
+<section id="avaliacoes" class="light"><div class="wrap">
+  <div class="head c rv"><span class="eyebrow">Quem conhece, recomenda</span><h2 class="h2">O que dizem nossos clientes</h2></div>
+  <div class="revs">
+    <div class="rev rv"><div class="s">★★★★★</div><p>“Levo o meu carro sempre pra revisão, bons profissionais, serviço garantido.”</p><small>Cliente no Google</small></div>
+    <div class="rev rv"><div class="s">★★★★★</div><p>“Atendimento VIP, muito rápidos e bom preço!”</p><small>Cliente no Google</small></div>
+    <div class="rev rv"><div class="s">★★★★★</div><p>“Qualidade e transparência.”</p><small>Cliente no Google</small></div>
+  </div>
+  <p style="text-align:center;margin-top:30px"><a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=Federal+Auto+Pe%C3%A7as+e+Servi%C3%A7os+QNL+10+Taguatinga" target="_blank" rel="noopener">Ver todas no Google →</a></p>
+</div></section>
+
+<section id="onde"><div class="wrap">
+  <div class="head rv"><span class="eyebrow">Onde estamos</span><h2 class="h2">Em Taguatinga Norte, fácil de chegar</h2></div>
+  <div class="loc">
+    <div class="info rv">
+      <div class="it"><div class="ic"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><small>Endereço</small><p>QNL 10 Conjunto A Lote 9, Taguatinga Norte, Brasília-DF · 72156-101</p></div></div>
+      <div class="it"><div class="ic"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><div><small>Telefone</small><p><a href="tel:+556135635200">(61) 3563-5200</a></p></div></div>
+      <div class="it"><div class="ic"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small>Horário</small><p>Segunda a sábado, a partir das 8h</p></div></div>
+      <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=Federal+Auto+Pe%C3%A7as+e+Servi%C3%A7os+QNL+10+Taguatinga+Norte" target="_blank" rel="noopener">Traçar rota no Maps</a>
+    </div>
+    <div class="map rv"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Federal Auto Peças" src="https://maps.google.com/maps?q=Federal%20Auto%20Pe%C3%A7as%20e%20Servi%C3%A7os%2C%20QNL%2010%20Taguatinga%20Norte&z=16&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<section class="light"><div class="wrap">
+  <div class="head c rv"><span class="eyebrow">Dúvidas frequentes</span><h2 class="h2">Perguntas rápidas</h2></div>
+  <div class="faq rv">
+    <details><summary>Preciso agendar ou posso chegar direto?</summary><p>Pode chegar direto no balcão. Agendando pelo site, você garante horário e evita espera na oficina.</p></details>
+    <details><summary>Vocês fazem o orçamento antes do serviço?</summary><p>Sim. Primeiro fazemos o diagnóstico, depois passamos o orçamento. Nada é feito sem a sua aprovação.</p></details>
+    <details><summary>Posso comprar só a peça?</summary><p>Pode. Vendemos peças no balcão com orientação para você levar a certa.</p></details>
+    <details><summary>Como confirmo meu agendamento?</summary><p>Ao enviar o formulário, o pedido chega no nosso WhatsApp e respondemos confirmando o dia e o horário.</p></details>
+  </div>
+</div></section>
+
+<section style="padding-top:70px"><div class="wrap"><div class="cta rv">
+  <h2>Carro dando sinal? Não espere piorar.</h2>
+  <p>Agende agora ou fale com a gente. Diagnóstico antes do orçamento.</p>
+  <div class="btns"><a class="btn btn-white" href="#agendar">Agendar serviço</a><a class="btn btn-ghost" href="tel:+556135635200">(61) 3563-5200</a></div>
+</div></div></section>
+
+<footer><div class="wrap fgrid">
+  <div class="logo"><b>Federal</b><small>Auto Peças<br>e Serviços</small></div>
+  <div>QNL 10 Cj. A Lt. 9 · Taguatinga Norte · <a href="tel:+556135635200">(61) 3563-5200</a> · <a href="/cartao">Cartão virtual</a></div>
+  <div style="font-size:12px">Site por <a href="https://btechsouto.shop" target="_blank">Btech Solution and Growth</a></div>
+</div></footer>
+
+<a class="fab" id="fab" href="#" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.8 13.8 0 0 0 5.3 4.7c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg></a>
+<div class="mbar"><a class="btn btn-ghost" href="tel:+556135635200">📞 Ligar</a><a class="btn btn-red" href="#agendar">📅 Agendar</a></div>
+
+<script>
+const WHATS='5561984709400';
+const SERVICOS=['Revisão completa','Troca de óleo e filtros','Freios','Suspensão e direção','Diagnóstico','Parte elétrica e bateria','Ar-condicionado','Orçamento de peças','Outro'];
+const sel=new Set();let slot='';
+const $=id=>document.getElementById(id);
+const wa=t=>'https://api.whatsapp.com/send?phone='+WHATS+'&text='+encodeURIComponent(t);
+$('fab').href=wa('Olá! Vim pelo site da Federal Auto Peças e gostaria de atendimento.');$('fab').target='_blank';
+function drawChips(){$('chips').innerHTML=SERVICOS.map(s=>`<span class="chip${sel.has(s)?' on':''}" data-s="${s}">${s}</span>`).join('')}
+$('chips').addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;const s=c.dataset.s;sel.has(s)?sel.delete(s):sel.add(s);drawChips()});
+document.querySelectorAll('[data-svc]').forEach(a=>a.addEventListener('click',()=>{sel.add(a.dataset.svc);drawChips()}));
+drawChips();
+const pad=n=>String(n).padStart(2,'0');
+const today=new Date();const iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+$('data').min=iso(today);const max=new Date();max.setDate(max.getDate()+45);$('data').max=iso(max);
+function drawSlots(){const v=$('data').value;slot='';if(!v){$('slots').innerHTML='<div class="hint">Escolha o dia primeiro</div>';return}
+ const d=new Date(v+'T12:00:00'),dow=d.getDay();
+ if(dow===0){$('slots').innerHTML='<div class="hint">Domingo fechado. Escolha outro dia 🙂</div>';$('dhint').textContent='';return}
+ const end=dow===6?12:17;const hs=[];for(let h=8;h<end;h++){hs.push(pad(h)+':00');hs.push(pad(h)+':30')}
+ const now=new Date();const isToday=iso(now)===v;
+ $('dhint').textContent=d.toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long'});
+ $('slots').innerHTML=hs.map(h=>{const[hh,mm]=h.split(':').map(Number);const past=isToday&&(hh*60+mm)<=now.getHours()*60+now.getMinutes()+60;return `<div class="slot${past?' off':''}" data-h="${h}">${h}</div>`}).join('')}
+$('data').addEventListener('change',drawSlots);
+$('slots').addEventListener('click',e=>{const s=e.target.closest('.slot');if(!s)return;document.querySelectorAll('.slot').forEach(x=>x.classList.remove('on'));s.classList.add('on');slot=s.dataset.h});
+$('tel').addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'').slice(0,11);if(v.length>6)v=`(${v.slice(0,2)}) ${v.slice(2,v.length-4)}-${v.slice(-4)}`;else if(v.length>2)v=`(${v.slice(0,2)}) ${v.slice(2)}`;e.target.value=v});
+function agendar(){const nome=$('nome').value.trim(),tel=$('tel').value.trim(),carro=$('carro').value.trim(),placa=$('placa').value.trim().toUpperCase(),data=$('data').value,obs=$('obs').value.trim();
+ const miss=[];if(!sel.size)miss.push('serviço');if(!nome)miss.push('nome');if(tel.replace(/\D/g,'').length<10)miss.push('WhatsApp');if(!carro)miss.push('carro');if(!data)miss.push('dia');if(!slot)miss.push('horário');
+ if(miss.length){$('err').textContent='Falta preencher: '+miss.join(', ');return}$('err').textContent='';
+ const d=new Date(data+'T12:00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'2-digit',year:'numeric'});
+ const L='━━━━━━━━━━━━━━━';
+ let m=`🔧 *NOVO AGENDAMENTO - FEDERAL AUTO PEÇAS*\n${L}\n`;
+ m+=`🛠️ *Serviço:* ${[...sel].join(', ')}\n📅 *Dia:* ${d}\n⏰ *Horário:* ${slot}\n${L}\n`;
+ m+=`👤 *Nome:* ${nome}\n📱 *WhatsApp:* ${tel}\n🚗 *Carro:* ${carro}${placa?'\n🔢 *Placa:* '+placa:''}\n`;
+ if(obs)m+=`📝 *Problema:* ${obs}\n`;
+ m+=`${L}\n✅ Aguardo a confirmação do horário. Obrigado!`;
+ window.open(wa(m),'_blank')}
+const hdr=$('hdr');addEventListener('scroll',()=>hdr.classList.toggle('sc',scrollY>30),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
