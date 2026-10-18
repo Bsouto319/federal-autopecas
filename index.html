@@ -332,5 +332,6 @@ const hdr=$('hdr');addEventListener('scroll',()=>hdr.classList.toggle('sc',scrol
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.1});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
